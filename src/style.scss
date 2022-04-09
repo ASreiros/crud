@@ -1,0 +1,306 @@
+.App {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    h1{
+        color: rgb(199, 199, 129);
+        text-shadow: 1px 0 0 #fff, 0 -1px 0 #fff, 0 1px 0 #fff, -1px 0 0 #fff;
+        text-transform: uppercase;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    }
+
+    .create{
+        border:rgb(199, 199, 129) 3px solid;
+        border-radius:0 0 5% 5%;
+        width: 50vw;
+        color:rgb(199, 199, 129);
+
+        -webkit-box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0,0,0,0); 
+        box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0,0,0,0);
+
+        h2{
+            background-color: rgb(199, 199, 129);
+            margin: 0;
+            padding: 10px 0;
+            color: black;
+            
+        }
+
+        .horizontal-holder{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 10px; 
+            justify-content: center;
+            margin-bottom: 20px;
+            
+
+            label{
+                color:rgb(199, 199, 129);
+            }
+
+            input{
+                background-color: transparent;
+                border: 1px rgb(226, 226, 32,0.2) solid;
+                color:rgb(226, 226, 32);
+                width: 100px;
+                text-align: center;
+            }
+        }
+        
+        button{
+            padding: 20px 50px;
+            border-radius: 15%;
+            margin-bottom: 10px;
+            border-color: rgb(199, 199, 129) ;
+            color: rgb(199, 199, 129) ;
+            font-size: larger;
+            background: rgb(199,199,129);
+            background: linear-gradient(130deg, rgba(199,199,129,0) 0%, rgba(199,199,129,0.3) 100%);
+        }
+
+    }
+
+    .list{
+        margin: 50px 0 50px 0px;
+        border:rgb(199, 199, 129) 3px solid;
+        border-radius: 0 0 5% 5%;
+        width: 80vw;
+
+        -webkit-box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0,0,0,0); 
+        box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0,0,0,0);
+        
+        .top-holder{
+            background-color: rgb(199, 199, 129);
+            margin: 0;
+            padding: 10px 0;
+            color: black;
+
+
+            select{
+                background-color: black;
+                color: #c7c781;
+            }
+        }
+
+
+
+
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li{
+            color: rgb(199, 199, 129);
+            border-top: rgb(199, 199, 129) 1px dashed;
+
+            .busybike{
+            }
+
+            .busybike::after{
+                content: ".";
+                font-size: 36px;
+                margin-left: 10px;
+                color: #FF616B;
+                animation-name: run;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-out;
+
+            }
+
+            @keyframes run {
+                0% {
+                    margin-left: 10px;
+                    color: #404D99;
+                }
+            
+                50% {
+                    margin-left: 20px;
+                    color: #e68383;
+                }
+    
+                100% {
+                    margin-left: 10px;
+                    color: #404D99;
+                }
+            }
+
+
+
+            div{
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+            }
+
+            button{
+                padding: 10px 20px;
+                width: 150px;
+                border-radius: 15%;
+                margin-bottom: 10px;
+                border-color: rgb(199, 199, 129) ;
+                color: rgb(199, 199, 129) ;
+                font-size: larger;
+                background: rgb(199,199,129);
+                background: linear-gradient(130deg, rgba(199,199,129,0) 0%, rgba(199,199,129,0.3) 100%);
+            }
+        }
+    }
+
+    .statistics{
+        margin: 50px 0 50px 0px;
+        border:rgb(199, 199, 129) 3px solid;
+        border-radius: 0 0 5% 5%;
+        width: 50vw;
+        color: #c7c781;
+
+        -webkit-box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0,0,0,0); 
+        box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0,0,0,0);
+        
+
+        h2{
+            background-color: rgb(199, 199, 129);
+            color: black;
+            margin: 0;
+            padding: 10px 0;
+        }
+
+       
+         
+
+
+
+        div{
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+        }
+
+        button{
+                padding: 10px 20px;
+                width: 150px;
+                border-radius: 15%;
+                margin-bottom: 10px;
+                border-color: rgb(199, 199, 129) ;
+                color: rgb(199, 199, 129) ;
+                font-size: larger;
+                background: rgb(199,199,129);
+                background: linear-gradient(130deg, rgba(199,199,129,0) 0%, rgba(199,199,129,0.3) 100%);
+        }
+        
+    }
+
+ 
+}
+
+.modal{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .edit{
+        border:rgb(199, 199, 129) 3px solid;
+        border-radius:0 0 5% 5%;
+        width: 50vw;
+        color:rgb(199, 199, 129);
+
+        -webkit-box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0,0,0,0); 
+        box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0,0,0,0);
+
+        h2{
+            background-color: #c7c781;
+            margin: 0;
+            padding: 10px 0;
+            color: black;
+            
+        }
+
+        .horizontal-holder{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 30px; 
+            justify-content:center;
+            margin-bottom: 20px;
+            
+
+            label{
+                color:rgb(199, 199, 129);
+            }
+
+            input{
+                background-color: transparent;
+                border: 1px rgb(226, 226, 32,0.2) solid;
+                color:rgb(226, 226, 32);
+                width: 100px;
+                text-align: center;
+            }
+
+            input[type=checkbox] {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                /* create custom checkbox appearance */
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+                padding: 6px;
+                /* background-color only for content */
+                background-clip:padding-box;
+                border: 1.5px solid #fcfc00;
+                border-radius: 6px;
+                background-color: transparent;
+                margin-left: 15px;
+                margin-right: 15px;
+            
+                &:checked{
+                    background-color: #fcfc00;
+
+                    
+                }
+            
+                &:focus{
+                    outline: none 
+                }
+            }
+        }
+        
+        button{
+            padding: 20px 50px;
+            width: 160px;
+            border-radius: 15%;
+            margin-bottom: 10px;
+            border-color: rgb(199, 199, 129) ;
+            color: rgb(199, 199, 129) ;
+            font-size: larger;
+            background: rgb(199,199,129);
+            background: linear-gradient(130deg, rgba(199,199,129,0) 0%, rgba(199,199,129,0.3) 100%);
+        }
+
+    }
+    
+}   
+
+.noshow{
+    display: none;
+}
+
+
