@@ -9,10 +9,13 @@ export default function Statistics({modal, garage}){
 
     useEffect(()=>{
         let data = localStorage.getItem("garage")
+        if(data===null){
+            data = [];
+        }
           setInfo(JSON.parse(data))
       }, [garage]);
 
-      useEffect(()=>{
+      useEffect(()=>{ 
             let counter = 0;
             let freecounter = 0;
             let km = 0;
