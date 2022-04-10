@@ -12,7 +12,7 @@ import Statistics from './Components/Statistics';
 function App() {
   const [garage, setGarage] = useState([])
   const [garagelist, setGarageList] = useState([])
-  const [filter, setFilter] = useState(4)
+  const [filter, setFilter] = useState(0)
   const [modal, setModal] = useState(0)
 
 

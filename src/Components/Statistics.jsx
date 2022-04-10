@@ -25,7 +25,7 @@ export default function Statistics({modal, garage}){
             })
             setBikesum(counter);
             setFreeBikesum(freecounter);
-            setTotalKm(km);
+            setTotalKm(Math.round(km*100)/100);
 
       }, [info]);
 

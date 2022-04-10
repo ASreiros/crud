@@ -17,10 +17,10 @@ export default function ListBikes({garage, show, deleteG, modal, filterchange, f
                     <option value="0">Visi</option>
                     <option value="1">Laisvi</option>
                     <option value="2">Užimti</option>
-                    <option value="3">Mažiausiai nauduoti viršuje</option>
-                    <option value="4">Daugiausiai nauduoti viršuje</option>
-                    <option value="5">Naujausiai nauduotas viršuje</option>
-                    <option value="6">Seniausiai nauduotas viršuje</option>
+                    <option value="3">Mažiausiai naudoti viršuje</option>
+                    <option value="4">Daugiausiai naudoti viršuje</option>
+                    <option value="5">Naujausiai naudotas viršuje</option>
+                    <option value="6">Seniausiai naudotas viršuje</option>
 
                 </select>
 
