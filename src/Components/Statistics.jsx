@@ -11,8 +11,9 @@ export default function Statistics({modal, garage}){
         let data = localStorage.getItem("garage")
         if(data===null){
             data = [];
-        }
-          setInfo(JSON.parse(data))
+        } else{
+            setInfo(JSON.parse(data))
+        } 
       }, [garage]);
 
       useEffect(()=>{ 
