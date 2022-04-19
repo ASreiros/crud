@@ -7,6 +7,7 @@ import getNewID from './Common/getNewID';
 import CreateBike from './Components/CreateBike';
 import EditBike from './Components/EditBike';
 import Statistics from './Components/Statistics';
+import {BrowserRouter, Link, Route,  Routes} from 'react-router-dom';
 
 
 function App() {
@@ -143,17 +144,27 @@ function App() {
 
   return (
     <>
-      <div className="App">
-        <Background></Background>
-        <h1>Kolt paspirtukų nuoma</h1>
-        <CreateBike modal={modal} create={create}></CreateBike>
-        <ListBikes filter={filter} filterchange={filterchange} modal={modal} show={show} deleteG={deleteG} garage={garagelist}></ListBikes>
-        <Statistics garage={garage} modal={modal}></Statistics>
-        {
-        modal ?  <EditBike edit={edit}  cancel={cancel} bike={GetBike()}></EditBike> : null
-        }
-      </div>
+      <BrowserRouter>
+        <div className="App">
+          <Background></Background>
+          <h1>Kolt paspirtukų nuoma</h1>
+          <div className='control-btn-holder'>
+            <Link to="/create" className='linkbutton'>Create</Link>
+            <Link to="/list" className='linkbutton'>List</Link>
+            <Link to="/statistika" className='linkbutton'>Statistika</Link>
+          </div>
 
+          <Routes>
+            <Route path='/create' element={<CreateBike modal={modal} create={create}></CreateBike>}></Route>
+            <Route path='/list' element={<ListBikes filter={filter} filterchange={filterchange} modal={modal} show={show} deleteG={deleteG} garage={garagelist}></ListBikes>}></Route>
+            <Route path='/statistika' element={<Statistics garage={garage} modal={modal}></Statistics>}></Route>
+        </Routes>
+
+          {
+          modal ?  <EditBike edit={edit}  cancel={cancel} bike={GetBike()}></EditBike> : null
+          }
+        </div>
+        </BrowserRouter>    
 
 
     </>  
